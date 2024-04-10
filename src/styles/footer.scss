@@ -1,0 +1,120 @@
+@use 'colors.scss';
+
+.footer{
+    margin: auto;
+    max-width: 100rem;
+    width: 100%;
+
+    
+
+    &__links{
+        
+        &__ul{
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            @media(max-width:978px){
+                display: flex;
+                flex-direction: column;
+                font-size: 16px;
+                margin-bottom: 80px;
+            }
+            
+            &__logo{
+                width: 5.93rem;
+                max-width: 100%;
+                
+                //@media (max-width:978px){
+                    //display: flex;
+                    //margin: 0 auto;
+                //}
+            }
+
+            &__li{
+                
+                a{
+                    text-decoration: none;
+                    color: colors.$corTextPrincipal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    margin-right: 15px;
+
+                    &:hover{
+                        color: #1786eb;
+                    }
+                }
+            }
+        }
+    }
+
+    &__logo{
+
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+
+        img{
+            width: 84px;
+        }
+    }
+
+    &__politics{
+
+        &__ul{
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin-top: 15px;
+
+            @media (max-width: 978px){
+                display: block;
+                text-align: center;
+            }
+
+            &__li{
+
+                a{
+                    list-style: none;
+                    text-decoration: none;
+                    color: colors.$corTextoSecundario;
+                    font-size: 12px;
+
+                    &:hover{
+                        color: #1786eb;
+                    }
+                }
+            }
+        }
+    }
+
+    &__copyrights{
+
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+        @media (max-width: 978px){
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            gap: 5px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        span{
+            font-size: 12px;
+            color: colors.$corTextPrincipal;
+        }
+    }
+}

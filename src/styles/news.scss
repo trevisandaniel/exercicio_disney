@@ -1,0 +1,62 @@
+@use 'colors.scss';
+
+.news{
+    margin: auto;
+    max-width: 100rem;
+    width: 100%;
+    background-color: black;
+    margin-bottom: 3.12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title{
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: colors.$corDeFundo;
+    }
+
+    &__links{
+
+       &__container{
+
+        
+        &__ul{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 3.12rem;
+            padding: 1.25rem;
+            
+            @media (max-width: 978px){
+                grid-template-columns: 1fr 1fr;
+            }
+
+            &__li{
+
+                list-style: none;
+                
+
+                &__container{
+                    
+
+                    img{
+                        width: 100%;
+                        cursor: pointer;
+                    }
+
+                    span{
+                        cursor: pointer;
+                        color: colors.$corDeFundo;
+                        line-height: 0.62rem;
+                        font-size: 1rem;
+                        font-weight: bold;
+                    }
+                }
+                
+            }
+        }
+       }
+    }
+}
